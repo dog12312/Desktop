@@ -7,7 +7,7 @@ body {
     position: fixed;
     background:  #000;
     z-index: 100; 
-    bottom: 0; 
+    bottom: 1; 
     left: 0;
     width: 100%;
 }
