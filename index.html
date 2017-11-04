@@ -7,6 +7,60 @@
 <audio src="/C/Windows/System32/Sounds/Startup.mp3" autoplay=""> Your browser does not support the <code>audio</code> element. </audio>
 
 
+
+<div>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,1);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#bootuplook{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: black;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+</style>
+</head>
+<body onload="bootup();">
+
+<div id="overlay">
+  <div id="bootuplook"><img src="https://img00.deviantart.net/ebfd/i/2012/225/0/f/particle_boot_screen_by_korruptninja-d50hq8m.gif" alt="" width="100%" height="100%" /></div>
+  <button onclick="bootupdone()">start</button>
+</div>
+
+<script>
+function bootup() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function bootupdone() {
+    document.getElementById("overlay").style.display = "none";
+}
+</script>
+     
+</body>
+</html> 
+</div>
+
 <a href="/C"><img src="https://winaero.com/blog/wp-content/uploads/2015/09/hard-drive-disk-icon.png" alt="" width="50" height="50" /></a>
 <p> </p>
 <a onclick="window.open( 'https://dog12312.github.io/Arcade', 'AppStore', 
