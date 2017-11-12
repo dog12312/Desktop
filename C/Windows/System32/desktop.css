@@ -1,3 +1,8 @@
+body {
+    background-image: url("./desktop.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
 #overlay {
     position: fixed;
     display: none;
@@ -21,11 +26,6 @@
     height: 100%;
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
-}
-body {
-    background-image: url("./desktop.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
 }
 body {margin:0;}
 .taskbar {
