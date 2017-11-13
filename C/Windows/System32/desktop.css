@@ -1,5 +1,5 @@
 body {
-    background-image: url(https://source.unsplash.com/random/);
+    background: url(images/<?php echo $selectedBg; ?>) no-repeat;
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
