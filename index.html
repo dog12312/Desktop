@@ -3,7 +3,7 @@
 <title>PC</title>
 <link rel="shortcut icon" href="/C/Windows/System32/windows.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="/C/Windows/System32/windows.ico" type="image/x-icon">
-
+<script src=/C/Windows/System32/System32.js></script>
 <link rel=stylesheet href=/C/Windows/System32/desktop.css>
   
 <div>
@@ -23,15 +23,6 @@
     </div>
     </div>
 </div>
-
-<script>
-function bootup() {
-    document.getElementById("bootupframe").style.display = "block";
-}
-function bootupdone() {
-    document.getElementById("bootupframe").style.display = "none";
-}
-</script>
      
 </body>
 </html>
@@ -50,31 +41,12 @@ function bootupdone() {
   <a onclick="wake()"><img  src="https://i.stack.imgur.com/kx8MT.gif" alt="" width="100%" height="100%"></a>
   </div>
 </div>
-
-<script>
-function sleep() {
-    document.getElementById("sleepframe").style.display = "block";
-}
-
-function wake() {
-    document.getElementById("sleepframe").style.display = "none";
-    setTimeout(sleep, 600000);
-}
-</script>
      
 </body>
 </html> 
 </div>
 
 
-
-<script>
-window.onmousemove = wake;
-window.onmousedown = wake;
-window.onclick = wake;
-window.onscroll = wake;
-window.onkeypress = wake;
-</script>
 
 
 
@@ -122,16 +94,6 @@ Good Day Mate
   <a><img src="/C/Windows/System32/windows.ico" alt="" onclick="OpenWBM()" width="50" height="50"></a>
   <a href="/Restart"><img src="http://www.clker.com/cliparts/K/X/P/n/z/n/windows-button-hi.png" alt="" width="200" height="50" /></a>
 </div>
-
-<script>
-function OpenWBM() {
-    document.getElementById("WBMoverlay").style.display = "block";
-}
-
-function CloseWBM() {
-    document.getElementById("WBMoverlay").style.display = "none";
-}
-</script>
      
 </body>
 </html> 
