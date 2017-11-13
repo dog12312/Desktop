@@ -59,12 +59,12 @@ function wake() {
     document.getElementById("sleepframe").style.display = "none";
     setTimeout(sleep, 600000);
 }
-    window.onload = wake;
-    window.onmousemove = wake;
-    window.onmousedown = wake; // catches touchscreen presses
-    window.onclick = wake;     // catches touchpad clicks
-    window.onscroll = wake;    // catches scrolling with arrow keys
-    window.onkeypress = wake;
+window.onload = wake;
+window.onmousemove = wake;
+window.onmousedown = wake; // catches touchscreen presses
+window.onclick = wake;     // catches touchpad clicks
+window.onscroll = wake;    // catches scrolling with arrow keys
+window.onkeypress = wake;
 </script>
      
 </body>
