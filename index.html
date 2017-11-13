@@ -12,7 +12,7 @@
 <html>
 <head>
 </head>
-<body onload="bootup();setTimeout(bootupdone, 7000);">
+<body onload="bootup();setTimeout(bootupdone, 7000);setTimeout(sleep, 60000);">
 
 <div id="overlay">
   <div id="bootuplook">
@@ -34,6 +34,19 @@ function bootupdone() {
 </body>
 </html>
 </div>
+
+
+<script>
+function sleep() {
+    var txt;
+    var r = confirm("Your PC wants to sleep.");
+    if (r == true) {
+        window.location = "/screensaver";
+    } else {
+        setTimeout(sleep, 300000);
+    }
+}
+</script>
 
 
 <a onclick="window.open( '/C', 'File Explorer', 
