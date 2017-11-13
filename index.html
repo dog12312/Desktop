@@ -59,19 +59,20 @@ function wake() {
     document.getElementById("sleepframe").style.display = "none";
     setTimeout(sleep, 600000);
 }
-window.onload = wake;
-window.onmousemove = wake;
-window.onmousedown = wake; // catches touchscreen presses
-window.onclick = wake;     // catches touchpad clicks
-window.onscroll = wake;    // catches scrolling with arrow keys
-window.onkeypress = wake;
 </script>
      
 </body>
 </html> 
 </div>
 
-
+<script>
+window.onload = wake;
+window.onmousemove = wake;
+window.onmousedown = wake;
+window.onclick = wake;
+window.onscroll = wake;
+window.onkeypress = wake;
+</script>
 
 <a onclick="window.open( '/C', 'File Explorer', 
 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=700,height=400' );"><img src="https://winaero.com/blog/wp-content/uploads/2015/09/hard-drive-disk-icon.png" alt="" width="50" height="50"></a>
