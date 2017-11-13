@@ -11,7 +11,7 @@
 <html>
 <head>
 </head>
-<body onload="bootup();setTimeout(bootupdone, 5900);setTimeout(sleep, 60000);">
+<body onload="bootup();setTimeout(bootupdone, 5900);setTimeout(sleep?, 60000);">
 
 <div id="overlay">
   <div id="bootuplook">
@@ -39,16 +39,50 @@ function bootupdone() {
 
 
 <script>
-function sleep() {
+function sleep?() {
     var txt;
     var r = confirm("Your PC wants to sleep.");
     if (r == true) {
-        window.location = "/screensaver";
+        sleep();
     } else {
         setTimeout(sleep, 300000);
     }
 }
 </script>
+
+
+<div>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<div id="sleepframe" onclick="wake()">
+  <div id="screensaver">
+  <a onclick="wake()"><img  src="https://i.stack.imgur.com/kx8MT.gif" alt="" width="100%" height="100%"></a>
+  </div>
+</div>
+
+<div style="padding:20px">
+  <h2>Overlay with Text</h2>
+  <button onclick="sleep()">Turn on overlay effect</button>
+</div>
+
+<script>
+function sleep() {
+    document.getElementById("sleepframe").style.display = "block";
+}
+
+function wake() {
+    document.getElementById("sleepframe").style.display = "none";
+}
+</script>
+     
+</body>
+</html> 
+</div>
+
 
 
 <a onclick="window.open( '/C', 'File Explorer', 
