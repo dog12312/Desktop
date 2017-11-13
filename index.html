@@ -11,7 +11,7 @@
 <html>
 <head>
 </head>
-<body onload="bootup();setTimeout(bootupdone, 5900);setTimeout(sleep, 6000);">
+<body onload="bootup();setTimeout(bootupdone, 5900);setTimeout(sleep, 600000);">
 
 <div id="overlay">
   <div id="bootuplook">
@@ -57,7 +57,7 @@ function sleep() {
 
 function wake() {
     document.getElementById("sleepframe").style.display = "none";
-    setTimeout(sleep, 6000);
+    setTimeout(sleep, 600000);
 }
 </script>
      
