@@ -10,7 +10,7 @@ function sleep() {
 
 function wake() {
     document.getElementById("sleepframe").style.display = "none";
-    setTimeout(sleep, 600000);
+    setTimeout(sleep, 6000);
 }
 window.onmousemove = wake;
 window.onmousedown = wake;
