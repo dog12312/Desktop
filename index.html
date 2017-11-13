@@ -11,7 +11,7 @@
 <html>
 <head>
 </head>
-<body onload="bootup();setTimeout(bootupdone, 5900);setTimeout(sleep, 10000);">
+<body onload="bootup();setTimeout(bootupdone, 5900);">
 
 <div id="bootupframe">
   <div id="bootuplook">
@@ -68,6 +68,7 @@ function wake() {
 
 
 <script>
+window.onload = wake;
 window.onmousemove = wake;
 window.onmousedown = wake;
 window.onclick = wake;
