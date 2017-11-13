@@ -7,7 +7,6 @@ function bootupdone() {
 function sleep() {
     document.getElementById("sleepframe").style.display = "block";
 }
-
 function wake() {
     document.getElementById("sleepframe").style.display = "none";
     setTimeout(sleep, 600000);
@@ -23,4 +22,11 @@ function OpenWBM() {
 
 function CloseWBM() {
     document.getElementById("WBMoverlay").style.display = "none";
+}
+function openarcade() {
+    document.getElementById("Arcadeframe").style.display = "block";
+}
+
+function closearcade() {
+    document.getElementById("Arcadeframe").style.display = "none";
 }
