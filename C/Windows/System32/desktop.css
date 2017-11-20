@@ -2,6 +2,7 @@ body {
     background: url(./desktop.jpg) no-repeat;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    cursor: move;
 }
 #bootupframe {
     position: fixed;
@@ -14,7 +15,7 @@ body {
     bottom: 0;
     background-color: rgba(0,0,0,0);
     z-index: 2;
-    cursor: pointer;
+    cursor: none;
 }
 #bootuplook{
     position: absolute;
