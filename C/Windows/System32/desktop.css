@@ -2,6 +2,10 @@ body {
     background: url(./desktop.jpg) no-repeat;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    height: 100%; 
+    width: 100%; 
+    padding: 0; 
+    margin: 0;
     cursor: url(http://www.pngmart.com/files/3/Cursor-Arrow-PNG-Photos.png), auto;
 }
 #bootupframe {
