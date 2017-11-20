@@ -2,7 +2,7 @@ body {
     background: url(./desktop.jpg) no-repeat;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    cursor: url("https://t00.deviantart.net/xSmiqeBn3HG8DcD_BTtTwItgA5I=/300x200/filters:fixed_height(100,100):origin()/pre00/d930/th/pre/f/2015/349/3/5/help_select_cursor_design_by_shadow999999-d9k786g.png");
+      cursor: url(http://www.pngmart.com/files/3/Cursor-Arrow-PNG-Transparent-Image.png), auto;
 }
 #bootupframe {
     position: fixed;
