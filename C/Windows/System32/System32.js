@@ -4,6 +4,9 @@ function bootup() {
 function bootupdone() {
     document.getElementById("bootupframe").style.display = "none";
 }
+function error() {
+    document.getElementById("error").style.display = "block";
+}
 function sleep() {
     document.getElementById("sleepframe").style.display = "block";
 }
