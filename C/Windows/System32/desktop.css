@@ -84,5 +84,6 @@ body {margin:0;}
     color: white;
 }
 #clock{
+    font-size:50px;
     color:#fff;
 }
