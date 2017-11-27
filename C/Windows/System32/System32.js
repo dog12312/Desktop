@@ -10,6 +10,9 @@ function showdesktop() {
 function hidedesktop() {
     document.getElementById("desktop").style.display = "none";
 }
+function error() {
+    document.getElementById("errorframe").style.display = "block";
+}
 function sleep() {
     document.getElementById("sleepframe").style.display = "block";
 }
