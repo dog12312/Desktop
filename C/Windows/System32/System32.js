@@ -4,12 +4,6 @@ function bootup() {
 function bootupdone() {
     document.getElementById("bootupframe").style.display = "none";
 }
-function showdesktop() {
-    document.getElementById("desktop").style.display = "block";
-}
-function hidedesktop() {
-    document.getElementById("desktop").style.display = "none";
-}
 function error() {
     document.getElementById("errorframe").style.display = "block";
 }
@@ -19,6 +13,12 @@ function sleep() {
 function wake() {
     document.getElementById("sleepframe").style.display = "none";
     setTimeout(sleep, 600000);
+}
+function showdesktop() {
+    document.getElementById("desktop").style.display = "block";
+}
+function hidedesktop() {
+    document.getElementById("desktop").style.display = "none";
 }
 window.onmousemove = wake;
 window.onmousedown = wake;
