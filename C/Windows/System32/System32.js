@@ -4,8 +4,11 @@ function bootup() {
 function bootupdone() {
     document.getElementById("bootupframe").style.display = "none";
 }
-function error() {
-    document.getElementById("errorframe").style.display = "block";
+function showdesktop() {
+    document.getElementById("desktop").style.display = "block";
+}
+function hidedesktop() {
+    document.getElementById("desktop").style.display = "none";
 }
 function sleep() {
     document.getElementById("sleepframe").style.display = "block";
