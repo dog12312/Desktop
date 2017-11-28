@@ -54,3 +54,6 @@ function checkTime(i) {
     }
     return i;
 }
+if (screen.width <= 699) {
+document.location = "/Mobile";
+}
