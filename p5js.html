@@ -33,11 +33,11 @@
 function move() {
   var elem = document.getElementById("myBar");   
   var width = 10;
-  var id = setInterval(frame, 50);
+  var id = setInterval(frame, 30);
   function frame() {
     if (width >= 100) {
       clearInterval(id);
-      window.location.href = 'https://dog12312.github.io'
+      window.location.href = 'https://alpha.editor.p5js.org/'
     } else {
       width++; 
       elem.style.width = width + '%'; 
