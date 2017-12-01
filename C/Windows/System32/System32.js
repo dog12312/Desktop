@@ -13,6 +13,9 @@ function hidedesktop() {
 function error() {
     document.getElementById("errorframe").style.display = "block";
 }
+function errorclosed() {
+    document.getElementById("errorframe").style.display = "none";
+}
 function sleep() {
     document.getElementById("sleepframe").style.display = "block";
 }
