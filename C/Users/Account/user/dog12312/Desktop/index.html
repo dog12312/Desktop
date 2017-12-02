@@ -4,9 +4,7 @@
 <link rel=stylesheet href=./desktop.css>
 <script src="/C/Users/Account/Secure.js"></script>
 
-<div>
-<html>
-<body onload="checkDesktopPassword();setTimeout(secure, 10000);">
+
 <script>
 function setDesktop(cname,cvalue) {
     document.cookie = cname + "=" + cvalue + ";";
@@ -29,14 +27,14 @@ function getDesktop(cname) {
 }
 
 function checkDesktop() {
-    var ID=getDesktop("UserID");
-    if (ID != "") {
-        window.location.href = '/C/Users/Account/user/' + ID + '/Desktop/index.html';
+    var username=getDesktop("Username");
+    if (username != "") {
+        checkDesktop();
     } else {
-       ID = prompt("Enter your ID/Username", "");
-       if (ID != "" && ID != null) {
-           setDesktop("UserID", ID);
-           window.location.href = '/C/Users/Account/user/' + ID + '/Desktop/index.html';
+       username = prompt("Enter your Username", "");
+       if (username != "" && username != null) {
+           setDesktop("Username", username);
+           window.history.back();
        }
     }
 }
@@ -65,7 +63,7 @@ function getDesktopPassword(cname) {
 function checkDesktopPassword() {
     var Password=getDesktopPassword("UserIDPassword");
     if (Password == "doggo") {
-    alert("Your in");
+        setTimeout(secure, 10000);
     } else {
        Password = prompt("Enter your password.", "");
        if (Password != "" && Password != null) {
@@ -75,9 +73,6 @@ function checkDesktopPassword() {
     }
 }
 </script>
-</body>
-</html>
-</div>
 
 <div id="secure">
 <a onclick="window.open( '/C', 'File Explorer', 
