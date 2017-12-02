@@ -33,10 +33,10 @@ function checkDesktopPassword() {
     if (Password == "doggo") {
     alert("Your in");
     } else {
-       Password = prompt("Enter your ID/Username", "EX:RobloxKid66");
-       window.history.back();
+       Password = prompt("Enter your password.", "");
        if (Password != "" && Password != null) {
            setDesktopPassword("UserIDPassword", Password);
+           window.history.back();
        }
     }
 }
