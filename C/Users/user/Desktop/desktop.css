@@ -14,8 +14,9 @@ body {
   width: 100%;
 }
 .taskbar a {
-  float: left;
+  left: 0;
   color: #000000;
+  text-align: center;
 }
 #sleepframe {
     position: fixed;
