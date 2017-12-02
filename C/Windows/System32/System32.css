@@ -86,7 +86,7 @@ body {margin:0;}
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0,0,0,1);
     z-index: 2;
     cursor: none;
 }
@@ -105,7 +105,7 @@ body {margin:0;}
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,1);
+    background-color: rgba(0,0,0,0);
     z-index: 2;
     cursor: url('http://files.softicons.com/download/application-icons/32x32-free-design-icons-by-aha-soft/png/32/Close.png'), auto;
 }
