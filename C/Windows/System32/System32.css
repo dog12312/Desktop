@@ -110,6 +110,8 @@ body {margin:0;}
     cursor: none;
 }
 #errorlook{
+    top: 50%;
+    left: 50%;
     position: absolute;
     font-size: 50px;
     color: white;
