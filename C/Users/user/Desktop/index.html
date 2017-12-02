@@ -7,11 +7,10 @@
 
 
 
-
 <a onclick="window.open( '/C', 'File Explorer', 
 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=700,height=400' );"><img src="https://winaero.com/blog/wp-content/uploads/2015/09/hard-drive-disk-icon.png" alt="" width="50" height="50"></a>
 <p> </p>
-<a onclick="IDSelect();"><img src="http://rms.safeguardstorage.com.my/DefaultPage/default/loginlogored.png" alt="" width="50" height="50"></a>
+<a onclick="checkDesktop();"><img src="http://rms.safeguardstorage.com.my/DefaultPage/default/loginlogored.png" alt="" width="50" height="50"></a>
 <p> </p>
 <a onclick="window.open( '/Arcade', 'Arcade', 
 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=1000,height=600' );"><img src="/Arcade/logo.ico" alt="" width="50" height="50"></a>
@@ -32,10 +31,36 @@
 </div>
 
 <script>
-function IDSelect() {
-    var ID = prompt("Enter your ID/Username", "EX:RobloxKid66");
-    if (ID != null) {
+function setDesktop(cname,cvalue) {
+    document.cookie = cname + "=" + cvalue + ";";
+}
+
+function getDesktop(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkDesktop() {
+    var ID=getDesktop("UserID");
+    if (ID != "") {
         window.location.href = '/C/Users/Account/user/' + ID + '/Desktop/index.html';
+    } else {
+       ID = prompt("Enter your ID/Username", "");
+       if (ID != "" && ID != null) {
+           setDesktop("UserID", ID);
+           window.location.href = '/C/Users/Account/user/' + ID + '/Desktop/index.html';
+       }
     }
 }
 </script>
