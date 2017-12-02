@@ -33,7 +33,9 @@
 
 <script>
 function IDSelect() {
-    var ID = document.getElementById("UserID").value;
-    window.location.href = '/C/Users/Account/user/' + ID + '/Desktop/index.html';
+    var ID = prompt("Enter your ID/Username", "EX:RobloxKid66");
+    if (ID != null) {
+        window.location.href = '/C/Users/Account/user/' + ID + '/Desktop/index.html';
+    }
 }
 </script>
