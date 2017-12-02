@@ -2,12 +2,13 @@
 <html>
 <link rel=stylesheet href=/C/Windows/System32/System32.css>
 <body onload="IDSelect();">
+<h2>Enter your User ID</h2>
+<input type="text" id="User ID" value="">
+<button onclick="IDSelect()">Enter!</button>
 <script>
 function IDSelect() {
-    var ID = prompt("Please enter your name ID", "User ID");
-    if (ID != null) {
-        window.location.href = '/C/Users/Account/' + ID + '/Desktop';
-    }
+    var ID = document.getElementById("User ID").value;
+    window.location.href = 'https://dog12312.github.io/C/Users/Account/' + ID + '/Desktop';
 }
 </script>
 </body>
