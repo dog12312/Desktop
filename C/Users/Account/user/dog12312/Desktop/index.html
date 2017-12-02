@@ -8,6 +8,40 @@
 <html>
 <body onload="checkDesktopPassword();setTimeout(secure, 10000);">
 <script>
+function setDesktop(cname,cvalue) {
+    document.cookie = cname + "=" + cvalue + ";";
+}
+
+function getDesktop(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkDesktop() {
+    var ID=getDesktop("UserID");
+    if (ID != "") {
+        window.location.href = '/C/Users/Account/user/' + ID + '/Desktop/index.html';
+    } else {
+       ID = prompt("Enter your ID/Username", "");
+       if (ID != "" && ID != null) {
+           setDesktop("UserID", ID);
+           window.location.href = '/C/Users/Account/user/' + ID + '/Desktop/index.html';
+       }
+    }
+}
+    
+    
 function setDesktopPassword(cname,cvalue) {
     document.cookie = cname + "=" + cvalue + ";";
 }
