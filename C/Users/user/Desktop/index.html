@@ -4,15 +4,6 @@
 <script src=/C/Windows/System32/System32.js></script>
 <link rel=stylesheet href=/desktop.css>
 
- <body onload="bootup();setTimeout(bootupdone, 5900);setTimeout(showdesktop, 7000);startTime();">
-<div id="bootupframe">
-  <div id="bootuplook">
-      <div align="center">
-<img src="https://cdn.dribbble.com/users/121337/screenshots/1024835/loading2.gif" alt="" width="100%" height="100%">
-    </div>
-    </div>
-</div>
-</body>
 
   
 <div id="desktop">
@@ -42,26 +33,19 @@
   <div id="clock" align="right"></div>
 </div>
 </div>
-
-
-<div id="sleepframe" onclick="wake()">
-  <div id="screensaver">
-    <a onclick="wake()"><img  src="https://i.stack.imgur.com/kx8MT.gif" alt="" width="100%" height="100%"></a>
-  </div>
-</div>
-
-
-<div id="errorframe">
-  <div id="errorlook">
-      <img onclick="errorclosed()" src="/C/Windows/System32/SystemEvents/Error/LightSystemError.png" alt="" width="500" height="200">
-  </div>
-</div>
-
-
+ 
+ 
 <div id="WBMoverlay" onclick="CloseWBM()">  
   <div id="WBMtext">
 <canvas id="0clock" width="400" height="400"
 style="background-color:#333">
 </canvas>
+  </div>
+</div>
+
+ 
+<div id="sleepframe" onclick="wake()">
+  <div id="screensaver">
+    <a onclick="wake()"><img  src="https://i.stack.imgur.com/kx8MT.gif" alt="" width="100%" height="100%"></a>
   </div>
 </div>
