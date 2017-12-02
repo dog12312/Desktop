@@ -35,9 +35,9 @@ function checkDesktop() {
         checkDesktopPassword();
     } else {
        username = prompt("Enter your Username", "");
-       if (username != UsNm && username != null) {
+       if (username != UsNm) {
            setDesktop("Username", username);
-           window.history.back();
+           checkDesktop();
        }
     }
 }
