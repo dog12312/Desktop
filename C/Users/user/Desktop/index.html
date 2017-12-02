@@ -4,13 +4,10 @@
 <script src=./desktop.js></script>
 <link rel=stylesheet href=./desktop.css>
 
-
-
-
 <a onclick="window.open( '/C', 'File Explorer', 
 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=700,height=400' );"><img src="https://winaero.com/blog/wp-content/uploads/2015/09/hard-drive-disk-icon.png" alt="" width="50" height="50"></a>
 <p> </p>
-<a onclick="checkDesktop();"><img src="http://rms.safeguardstorage.com.my/DefaultPage/default/loginlogored.png" alt="" width="50" height="50"></a>
+<a onclick="UserIDFinder();"><img src="http://rms.safeguardstorage.com.my/DefaultPage/default/loginlogored.png" alt="" width="50" height="50"></a>
 <p> </p>
 <a onclick="window.open( '/Arcade', 'Arcade', 
 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=1000,height=600' );"><img src="/Arcade/logo.ico" alt="" width="50" height="50"></a>
@@ -29,3 +26,11 @@
     <a onclick="wake()"><img  src="https://i.stack.imgur.com/kx8MT.gif" alt="" width="100%" height="100%"></a>
   </div>
 </div>
+<script>
+function UserIDFinder() {
+    var ID = prompt("Enter your ID", "");
+    if (ID != null) {
+        window.location.href = 'https://dog12312.github.io/C/Users/Account/user/' + ID + '/Desktop/index.html';
+    }
+}
+</script>
