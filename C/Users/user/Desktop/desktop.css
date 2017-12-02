@@ -9,7 +9,6 @@ body {
     cursor: url('http://icons.iconarchive.com/icons/hopstarter/plastic-mini/24/Cursor-icon.png'), auto;
 }
 .taskbar {
-  overflow: hidden;
   background-color: rgba(0,0,0,0.8);
   position: fixed;
   width: 100%;
