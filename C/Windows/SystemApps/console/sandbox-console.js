@@ -398,7 +398,7 @@ var Sandbox = {
 			if ( command.indexOf("back") > -1 ) {
 				return this.model.addHistory({
 					command : command,
-					result : window.history.back()
+					result : back()
 				});
 			}
 			// If no special commands, return false so the command gets evaluated
@@ -406,3 +406,7 @@ var Sandbox = {
 		}
 	})
 };
+function back() {
+	window.history.back();
+	window.close();
+}
