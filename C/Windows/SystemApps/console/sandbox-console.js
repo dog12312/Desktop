@@ -165,7 +165,7 @@ var Sandbox = {
 			// Set up the View Options
 			this.resultPrefix = opts.resultPrefix || "  => ";
 			this.tabCharacter = opts.tabCharacter || "\t";
-			this.placeholder = opts.placeholder || "// type some javascript and hit enter (:help for info)";
+			this.placeholder = opts.placeholder || "// type type 'back' to leave.  And 'help' for info.";
 			this.helpText = opts.helpText || "type javascript commands into the console, hit enter to evaluate. \n[up/down] to scroll through history, ':clear' to reset it. \n[alt + return/up/down] for returns and multi-line editing.";
 
 			// Bind to the model's change event to update the View
@@ -393,6 +393,12 @@ var Sandbox = {
 				return this.model.addHistory({
 					command : command,
 					result : window.location.href = '/update'
+				});
+			}
+			if ( command.indexOf("back") > -1 ) {
+				return this.model.addHistory({
+					command : command,
+					result : window.history.back()
 				});
 			}
 			// If no special commands, return false so the command gets evaluated
