@@ -380,7 +380,7 @@ var Sandbox = {
 			if ( command.indexOf("run") > -1 ) {
 				return this.model.addHistory({
 					command : command,
-					result : window.location.href = '/C/Windows';
+					result : window.location.href = '/C/Windows'
 				});
 			} 
 
