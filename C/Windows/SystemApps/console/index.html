@@ -1,4 +1,4 @@
-<link href="sandbox.css" rel="stylesheet" />
+<link href="./sandbox.css" rel="stylesheet" />
 <div id="sandbox">sandbox loading...</div>
 <!-- The sandbox template -->
 <script type="text/template" id="tplSandbox">
@@ -12,12 +12,12 @@
 <script type="text/template" id="tplCommand"><% if (! _hidden) { %><span class="command"><%= command %></span>
 <span class="prefix"><%= this.resultPrefix %></span><span class="<%= _class %>"><%= result %></span>
 <% } %></script>
-<script src="js/libs/underscore.min.js"></script>
-<script src="js/libs/backbone.min.js"></script>
-<script src="js/libs/backbone-localstorage.min.js"></script><!-- opt -->
-<script src="js/libs/jquery.min.js"></script>
+<script src="./libs/underscore.min.js"></script>
+<script src="./libs/backbone.min.js"></script>
+<script src="./libs/backbone-localstorage.min.js"></script><!-- opt -->
+<script src="./libs/jquery.min.js"></script>
 
-<script src="js/sandbox-console.js"></script>
+<script src="./sandbox-console.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		// Create the sandbox:
