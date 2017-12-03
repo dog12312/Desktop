@@ -67,8 +67,8 @@ body {margin:0;}
     bottom: 0;
     background-color: rgba(0,0,0,0.7);
     z-index: 2;
+    cursor: url('http://icons.iconarchive.com/icons/hopstarter/plastic-mini/24/Cursor-icon.png'), auto;
 }
-
 #WBMtext{
     position: absolute;
     top: 50%;
@@ -90,7 +90,6 @@ body {margin:0;}
     z-index: 2;
     cursor: none;
 }
-
 #screensaver{
     position: absolute;
     font-size: 50px;
