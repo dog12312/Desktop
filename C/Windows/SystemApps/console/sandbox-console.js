@@ -383,7 +383,18 @@ var Sandbox = {
 					result : window.location.href = '/C/Windows'
 				});
 			} 
-
+			if ( command.indexOf("reload") > -1 ) {
+				return this.model.addHistory({
+					command : command,
+					result : window.location.href = '/'
+				});
+			}
+			if ( command.indexOf("update") > -1 ) {
+				return this.model.addHistory({
+					command : command,
+					result : window.location.href = '/update'
+				});
+			}
 			// If no special commands, return false so the command gets evaluated
 			return false;
 		}
