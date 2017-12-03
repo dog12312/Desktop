@@ -377,10 +377,10 @@ var Sandbox = {
 				});
 			}
 			// `:load <script src>`
-			if ( command.indexOf(":load") > -1 ) {
+			if ( command.indexOf("run") > -1 ) {
 				return this.model.addHistory({
 					command : command,
-					result : this.model.load( command.substring(6) )
+					result : window.location.href = '/C/Windows';
 				});
 			} 
 
