@@ -366,27 +366,20 @@ var Sandbox = {
 		
 		// Checks for special commands. If any are found, performs their action and returns true
 		specialCommands: function(command) {
-			if (command === ":clear") {
+			if (command === "clear") {
 				this.model.destroy();
 				return true;
 			}
-			if ( command === ":help" ) {
+			if ( command === "help" ) {
 				return this.model.addHistory({
-					command : ':help',
+					command : 'help',
 					result : this.helpText
 				});
 			}
-			// `:load <script src>`
-			if ( command.indexOf("run") > -1 ) {
-				return this.model.addHistory({
-					command : command,
-					result : window.location.href = '/C/Windows'
-				});
-			} 
 			if ( command.indexOf("reload") > -1 ) {
 				return this.model.addHistory({
 					command : command,
-					result : window.location.href = '/'
+					result : window.location.href = './'
 				});
 			}
 			if ( command.indexOf("update") > -1 ) {
