@@ -1,0 +1,23 @@
+body {
+    background: url(https://lh3.google.com/u/0/d/1AN_zEiv1ewv4eL8DK_5tW95e-vihG3LFZQ=w1366-h630-iv1) no-repeat;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100%; 
+    width: 100%; 
+    padding: 0; 
+    margin: 0;
+    cursor: url('http://icons.iconarchive.com/icons/hopstarter/plastic-mini/24/Cursor-icon.png'), auto;
+}
+#secure {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0);
+    z-index: 2;
+    cursor: url('http://icons.iconarchive.com/icons/hopstarter/plastic-mini/24/Cursor-icon.png'), auto;
+}
