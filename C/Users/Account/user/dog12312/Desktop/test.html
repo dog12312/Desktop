@@ -1,0 +1,93 @@
+<title>Desktop</title>
+<link rel="shortcut icon" href="/C/Windows/System32/windows.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/C/Windows/System32/windows.ico" type="image/x-icon">
+<link rel=stylesheet href=./desktop.css>
+<script src="/C/Users/Account/Secure.js"></script>
+
+
+<body onload="checkUsername();">
+<script>
+var usnm = "dog12312";
+var pswd = "doggo";
+function setUsername(cname,cvalue) {
+    document.cookie = cname + "=" + cvalue + ";";
+}
+function getUsername(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkUsername() {
+    var user=getUsername("username");
+    if (user == usnm) {
+        checkPassword();
+    } else {
+       user = prompt("Please enter your username:","");
+       if (user == usnm && user != null) {
+           setUsername("username", user, 30);
+           checkPassword();
+       } else {
+       window.history.back();
+       }
+    }
+}
+function setPassword(cname,cvalue) {
+    document.cookie = cname + "=" + cvalue + ";";
+}
+function getPassword(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkPassword() {
+    var pass=getPassword("password");
+    if (pass == pswd) {
+        alert("Welcome again " + user);
+    } else {
+       pass = prompt("Please enter your password:","");
+       if (pass == pswd && pass != null) {
+           setPassword("password", pass, 30);
+           alert("Welcome again " + user);
+       } else {
+       window.history.back();
+       }
+    }
+}
+</script>
+<div id="secure">
+<a onclick="window.open( '/C', 'File Explorer', 
+'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=700,height=400' );"><img src="https://winaero.com/blog/wp-content/uploads/2015/09/hard-drive-disk-icon.png" alt="" width="50" height="50"></a>
+<p> </p>
+<a onclick="window.open( '/Arcade', 'Arcade', 
+'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=1000,height=600' );"><img src="/Arcade/logo.ico" alt="" width="50" height="50"></a>
+<p> </p>
+<a onclick="window.open( '/C/Users/user/Desktop/Games', 'File Explorer', 
+'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=1000,height=600' );"><img src="https://cdn4.iconfinder.com/data/icons/sabre/snow_sabre_black/512/folder_black_games.png" alt="" width="50" height="50"></a>
+<p> </p>
+<a onclick="window.open( '/C/Users/user/Desktop/Applications', 'File Explorer', 
+'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=1000,height=600' );"><img src="http://icons.iconarchive.com/icons/thvg/wood-folders/512/Matte-Applications-icon.png" alt="" width="50" height="50"></a>
+<p> </p>
+<div>
+</body>
