@@ -1,7 +1,4 @@
 body {
-    background: url(https://nofilmschool.com/sites/default/files/styles/article_wide/public/746f61ccc8c991ad72b95b032fbcb1cd.png?itok=hVwF9dRL) no-repeat;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
     height: 100%; 
     width: 100%; 
     padding: 0; 
@@ -9,6 +6,8 @@ body {
     cursor: url('http://icons.iconarchive.com/icons/hopstarter/plastic-mini/24/Cursor-icon.png'), auto;
 }
 #secure {
+    background: url(https://nofilmschool.com/sites/default/files/styles/article_wide/public/746f61ccc8c991ad72b95b032fbcb1cd.png?itok=hVwF9dRL) no-repeat;
+    background-size: 100% 100%;
     position: fixed;
     display: none;
     width: 100%;
