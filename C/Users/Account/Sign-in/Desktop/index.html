@@ -1,11 +1,33 @@
 <title>Sign in-Desktop</title>
-<link rel=stylesheet href=/C/Users/user/Desktop/desktop.css>
-<h2><font color="white">Enter your User ID</font></h2>
-<input type="text" id="UserID" value="">
-<button onclick="IDSelect();">Enter!</button>
+<style> 
+input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #000;
+    color: white;
+}
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #000;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+<div align="center">
+<form>
+  <font color="white"><h1>User ID</h1></font>
+  <input type="text" id="UserID" value="EX:Roar488492">
+</form>
+<input type="button" onclick="IDSelect();" value="Enter!">
 <script>
 function IDSelect() {
     var ID = document.getElementById("UserID").value;
     location.replace('https://dog12312.github.io/C/Users/Account/user/' + ID + '/Desktop/index.html');
 }
 </script>
+</div>
