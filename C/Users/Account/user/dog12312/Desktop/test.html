@@ -42,11 +42,11 @@ function checkUsername() {
        }
     }
 }
-function setPassword(cname,cvalue) {
-    document.cookie = cname + "=" + cvalue + ";";
+function setPassword(pname,pvalue) {
+    document.cookie = pname + "=" + pvalue + ";";
 }
-function getPassword(cname) {
-    var name = cname + "=";
+function getPassword(pname) {
+    var name = pname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
     var ca = decodedCookie.split(';');
     for(var i = 0; i < ca.length; i++) {
