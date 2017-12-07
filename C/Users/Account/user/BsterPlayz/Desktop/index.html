@@ -1,0 +1,44 @@
+<title>Desktop</title>
+<link rel="shortcut icon" href="/C/Windows/System32/windows.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/C/Windows/System32/windows.ico" type="image/x-icon">
+<link rel=stylesheet href=./desktop.css>
+<script src="/C/Users/Account/Secure.js"></script>
+
+
+<body onload="Username();">
+<script>
+function Username() {
+    var ID = prompt("Enter your Username", "");
+    if (ID == username) {
+        Password();
+    } else {
+    window.history.back();
+  }
+}
+function Password() {
+    var ID = prompt("Enter your Password", "");
+    if (ID == password) {
+        alert("Done");
+        Secure();
+    } else {
+    window.history.back();
+  }
+}
+var username = "Buster_Plays";
+var password = "Jacob2006";
+</script>
+<div id="secure">
+<a onclick="window.open( '/C', 'File Explorer', 
+'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=700,height=400' );"><img src="https://winaero.com/blog/wp-content/uploads/2015/09/hard-drive-disk-icon.png" alt="" width="50" height="50"></a>
+<p> </p>
+<a onclick="window.open( '/Arcade', 'Arcade', 
+'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=1000,height=600' );"><img src="/Arcade/logo.ico" alt="" width="50" height="50"></a>
+<p> </p>
+<a onclick="window.open( '/C/Users/user/Desktop/Games', 'File Explorer', 
+'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=1000,height=600' );"><img src="https://cdn4.iconfinder.com/data/icons/sabre/snow_sabre_black/512/folder_black_games.png" alt="" width="50" height="50"></a>
+<p> </p>
+<a onclick="window.open( '/C/Users/user/Desktop/Applications', 'File Explorer', 
+'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=1000,height=600' );"><img src="http://icons.iconarchive.com/icons/thvg/wood-folders/512/Matte-Applications-icon.png" alt="" width="50" height="50"></a>
+<p> </p>
+<div>
+</body>
