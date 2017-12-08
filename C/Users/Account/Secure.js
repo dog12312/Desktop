@@ -1,3 +1,3 @@
-function Secure() {
+function secure() {
     document.getElementById("secure").style.display = "block";
 }
