@@ -21,15 +21,42 @@ input[type=button], input[type=submit], input[type=reset] {
 <div align="center">
 <form>
   <font color="white"><h1>User ID</h1></font>
-  <input type="text" id="UserID" value="EX:Roar488492">
+  <input type="text" id="EnterUserID" value="EX:Roar488492">
 </form>
-<input type="button" onclick="IDSelect();" value="Enter!">
+<input type="button" onclick="checkUserID();" value="Enter!">
 <p> </p>
 <input type="button" onclick="location.replace('https://dog12312.github.io/C/Users/user/Desktop/index.html');" value="don't have a custom desktop.">
 <script>
-function IDSelect() {
-    var ID = document.getElementById("UserID").value;
-    location.replace('https://dog12312.github.io/C/Users/Account/user/' + ID + '/Desktop/index.html');
+
+function setUserID(cname,cvalue) {
+    document.cookie = cname + "=" + cvalue + ";";
+}
+function getUserID(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+function checkUserID() {
+    var ID=getUserID("UserID");
+    if (ID != "") {
+        location.replace('https://dog12312.github.io/C/Users/user/Desktop/index.html');
+    } else {
+       var ID = document.getElementById("EnterUserID").value;
+       if (ID != "" && ID != null) {
+           setUserID("UserID", ID;
+           location.replace('https://dog12312.github.io/C/Users/Account/user/' +  ID + '/Desktop/index.html');
+       }
+    }
 }
 </script>
 </div>
