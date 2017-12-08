@@ -1,15 +1,15 @@
 <title>Sign in-Desktop</title>
 <style> 
 input[type=text] {
-    padding: 12px 20px;
+    padding: 12px 50px;
     margin: 8px 0;
     box-sizing: border-box;
-    border: none;
-    background-color: #000;
+    border: black;
+    background-color: #808080;
     color: white;
 }
 input[type=button], input[type=submit], input[type=reset] {
-    background-color: #000;
+    background-color: #666666;
     border: none;
     color: white;
     padding: 16px 32px;
@@ -19,11 +19,11 @@ input[type=button], input[type=submit], input[type=reset] {
 }
 </style>
 <div align="center">
+<font color="white"><h1>User ID</h1></font>
 <form>
-  <font color="white"><h1>User ID</h1></font>
-  <input type="text" id="EnterUserID" value="EX:VBAPrC0vlzerHis1i">
+  <input type="text" id="EnterUserID" value="">
+  <input type="button" onclick="IDSelect();" value="EX:VBAPrC0vlzerHis1i">
 </form>
-<input type="button" onclick="IDSelect();" value="Enter!">
 <p> </p>
 <input type="button" onclick="location.replace('https://dog12312.github.io/C/Users/user/Desktop/index.html');" value="don't have a custom desktop.">
 <script>
