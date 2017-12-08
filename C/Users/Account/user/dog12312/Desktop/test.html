@@ -75,6 +75,7 @@ function checkPassword() {
        if (pass == pswd) {
            setPassword("password", pass);
            alert("Welcome");
+           secure();
        } else {
        alert("error");
        window.history.back();
