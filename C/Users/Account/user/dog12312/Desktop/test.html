@@ -9,11 +9,11 @@
 <script>
 var usnm = "dog12312";
 var pswd = "doggo";
-function setUsername(cname,cvalue) {
-    document.cookie = cname + "=" + cvalue + ";";
+function setUsername(uname,uvalue) {
+    document.cookie = uname + "=" + uvalue + ";";
 }
-function getUsername(cname) {
-    var name = cname + "=";
+function getUsername(uname) {
+    var usname = uname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
     var ca = decodedCookie.split(';');
     for(var i = 0; i < ca.length; i++) {
@@ -46,7 +46,7 @@ function setPassword(pname,pvalue) {
     document.cookie = pname + "=" + pvalue + ";";
 }
 function getPassword(pname) {
-    var name = pname + "=";
+    var ps = pname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
     var ca = decodedCookie.split(';');
     for(var i = 0; i < ca.length; i++) {
@@ -54,8 +54,8 @@ function getPassword(pname) {
         while (c.charAt(0) == ' ') {
             c = c.substring(1);
         }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
+        if (c.indexOf(ps) == 0) {
+            return c.substring(ps.length, c.length);
         }
     }
     return "";
