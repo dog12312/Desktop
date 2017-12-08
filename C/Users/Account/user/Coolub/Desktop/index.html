@@ -5,28 +5,80 @@
 <script src="/C/Users/Account/Secure.js"></script>
 
 
-<body onload="Username();">
 <script>
-function Username() {
-    var ID = prompt("Enter your Username", "");
-    if (ID == username) {
-        Password();
-    } else {
-    window.history.back();
-  }
+var usnm = "Caleb";
+var pswd = "01000011";
+function setUsername(cname,cvalue) {
+    document.cookie = cname + "=" + cvalue + ";";
 }
-function Password() {
-    var ID = prompt("Enter your Password", "");
-    if (ID == password) {
-        alert("Done");
-        Secure();
-    } else {
-    window.history.back();
-  }
+function getUsername(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
 }
-var username = "Caleb";
-var password = "01000011";
+function checkUsername() {
+    var user=getUsername("username");
+    if (user == usnm) {
+        checkPassword();
+    } else {
+       user = prompt("Please enter your username:","");
+       if (user == usnm) {
+           setUsername("username", user);
+           checkPassword();
+       } else {
+       window.history.back();
+       window.close();
+       }
+    }
+}
+function setPassword(pname,pvalue) {
+    document.cookie = pname + "=" + pvalue + ";";
+}
+function getPassword(pname) {
+    var password = pname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(password) == 0) {
+            return c.substring(password.length, c.length);
+        }
+    }
+    return "";
+}
+function checkPassword() {
+    var pass=getPassword("password");
+    if (pass == pswd) {
+        alert("Welcome again");
+        secure();
+    } else {
+       pass = prompt("Please enter your password:","");
+       if (pass == pswd) {
+           setPassword("password", pass);
+           alert("Welcome");
+           secure();
+       } else {
+       alert("error");
+       window.history.back();
+       window.close();
+       }
+    }
+}
 </script>
+<body onload="checkUsername();">
 <div id="secure">
 <a onclick="window.open( '/C', 'File Explorer', 
 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=700,height=400' );"><img src="https://winaero.com/blog/wp-content/uploads/2015/09/hard-drive-disk-icon.png" alt="" width="50" height="50"></a>
