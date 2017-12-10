@@ -2,6 +2,18 @@
 <link rel="shortcut icon" href="/C/Windows/System32/System.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="/C/Windows/System32/System.ico" type="image/x-icon">
 <link rel=stylesheet href=>
+<body onload="check();">
+<script> 
+function check() {
+  var checkinstall = localStorage.getItem("osinstalled");
+  if (checkinstall == "1") {
+    
+  } else {
+    window.location.href = "/reinstall.html"
+  }
+}
+</script>
+</body>
 <img onclick="window.close();" src="/C/Windows/System32/icons/close.png" alt="" width="30" height="30">
 <p> </p>
 <a onclick="window.location.href = '/C/Windows'">Windows/</a>
