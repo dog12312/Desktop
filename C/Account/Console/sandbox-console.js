@@ -391,7 +391,7 @@ var Sandbox = {
 			if ( command.indexOf("run") > -1 ) {
 				return this.model.addHistory({
 					command : command,
-					result : bootup();window.location.href = '/C/Users/Account/Sign-in/Desktop/index.html'
+					result : window.location.href = '/C/Users/Account/Sign-in/Desktop/index.html'
 				});
 			}
 			if ( command.indexOf("back") > -1 ) {
