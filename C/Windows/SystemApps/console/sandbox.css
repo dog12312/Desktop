@@ -3,7 +3,10 @@
  *
  * http://openexchangerates.github.io/javascript-sandbox-console/
  */
-
+body {
+  background: #000;
+  margin: 0;
+}
 #sandbox,
 #sandbox pre.output,
 #sandbox pre.output span,
@@ -34,7 +37,7 @@
 	display:block;
 	white-space:pre;
 	width:100%;
-	height:600px;
+	height:100%;
 	overflow-y:auto;
 	position:relative;
 	padding:0;
