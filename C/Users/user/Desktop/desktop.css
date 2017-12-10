@@ -9,14 +9,18 @@ body {
     cursor: url('http://icons.iconarchive.com/icons/hopstarter/plastic-mini/24/Cursor-icon.png'), auto;
 }
 .taskbar {
+  overflow: hidden;
   background-color: rgba(0,0,0,0.8);
-   position: fixed;
-   left: 0;
-   width: 100%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 .taskbar a {
-  color: #000000;
+  float: left;
+  display: block;
+  color: #ffffff;
   text-align: center;
+  text-decoration: none;
 }
 #sleepframe {
     position: fixed;
