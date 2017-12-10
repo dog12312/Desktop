@@ -1,0 +1,99 @@
+<style>
+body {
+  background: #000;
+}
+#myProgress {
+  width: 100%;
+  background-color: #000;
+}
+
+#Reinstall {
+  width: 0%;
+  height: 30px;
+  background-color: #fff;
+}
+</style>
+<body onload="check()">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id="myProgress" style="color:fff;">
+  <div id="Reinstall"></div>
+</div>
+<script>
+function check() {
+  var checkinstall = localStorage.getItem("osinstalled");
+  if (checkinstall == "1") {
+    window.location.href = "/"
+  } else {
+    step1();
+  }
+}
+function step1() {
+  var elem = document.getElementById("Reinstall");   
+  var width = 0;
+  var id = setInterval(frame, 0.1);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+      step2()
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+function step2() {
+  var elem = document.getElementById("Reinstall");   
+  var width = 0;
+  var id = setInterval(frame, 20);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+      step3()
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+function step3() {
+  var elem = document.getElementById("Reinstall");   
+  var width = 0;
+  var id = setInterval(frame, 100);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+      step4()
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+function step4() {
+  var elem = document.getElementById("Reinstall");   
+  var width = 0;
+  var id = setInterval(frame, 50);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+      localStorage.setItem("osinstalled", "1");
+      window.location.href = "/"
+      done();
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+function done() {
+  if (typeof(Storage) !== "undefined") {
+      localStorage.setItem("osinstalled", "1");
+      check();
+   
+  }
+}
+</script>
+</body>
