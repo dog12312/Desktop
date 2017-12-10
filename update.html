@@ -19,15 +19,66 @@
 
 <div id="desktop">
 <object data="/C/Account/Console/index.html" width="100%" height="100%">
-<html>
-	<body onload="launching();">
-	loading
-	<script>
-	function launching() {
-	  window.location.href = '/console';
-	}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<title>Console</title>
+	
+	<!-- Stylesheet -->
+	<link href="/console/sandbox.css" rel="stylesheet"/>
+	
+</head>
+
+<body>
+
+	<!-- HTML -->
+
+	<div id="sandbox">Console loading, please wait...</div>
+
+
+	<!-- Templates -->
+	
+	<!-- The sandbox template: -->
+	<script type="text/template" id="tplSandbox">
+		<pre class="output"></pre>
+		<div class="input">
+			<textarea rows="1" placeholder="<%= placeholder %>"></textarea>
+		</div>
 	</script>
-	</body>
+
+	<!-- The command/result template (NB whitespace/line breaks matter inside <pre> tag): -->
+	<script type="text/template" id="tplCommand"><% if (! _hidden) { %><span class="command"><%= command %></span>
+<span class="prefix"><%= this.resultPrefix %></span><span class="<%= _class %>"><%= result %></span>
+<% } %></script>
+
+
+	<!-- Scripts -->
+
+	<!-- Underscore, Backbone, backbone-localStorage, jQuery -->
+	<script src="/C/Windows/SystemApps/console/libs/underscore.min.js"></script>
+	<script src="/C/Windows/SystemApps/console/libs/backbone.min.js"></script>
+	<script src="/C/Windows/SystemApps/console/libs/backbone-localStorage.min.js"></script>
+	<script src="/C/Windows/SystemApps/console/libs/jquery.min.js"></script>
+
+	<!-- The JS Sandbox Console script (requires underscore, backbone and jquery): -->
+	<script src="/console/sandbox-console.js"></script>
+	
+	<!-- When ready, create the model and view -->
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			// Create the sandbox:
+			window.sandbox = new Sandbox.View({
+				el : $('#sandbox'),
+				model : new Sandbox.Model({
+					iframe : true,  // evaluate commands inside a hidden iframe (default: false)
+					fallback : true // use global eval if iframe isn't available (default: true)
+				})
+			});
+		});
+	</script>
+
+</body>
 </html>
 </object>
 </div>
