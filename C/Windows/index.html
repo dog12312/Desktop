@@ -6,3 +6,15 @@
 <img onclick="window.history.back();" src="/C/Windows/System32/icons/backbutton.png" alt="" width="30" height="30">
 <p> </p>
 <a onclick="window.location.href = '/C/Windows/System32'">System32/</a>
+<body onload="check();">
+<script> 
+function check() {
+  var checkinstall = localStorage.getItem("osinstalled");
+  if (checkinstall == "1") {
+    
+  } else {
+    window.location.href = "/reinstall.html"
+  }
+}
+</script>
+</body>
