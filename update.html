@@ -18,19 +18,7 @@
 </body>
 
 <div id="desktop">
-<object data="/C/Users/Account/Sign-in/Desktop/index.html" width="100%" height="100%">
-<div align="center" onload="localStorage.removeItem("osinstalled");">
-<h1>Error<h1>
-<code>An error occured please select one to continue</code>
-</div>
-<div class="home">
-<a href="#" class="button"><img src="http://www.myiconfinder.com/uploads/iconsets/256-256-8840651917921f20e946c25189d80bc9-sign.png" alt="" width="100" height="100"></a>]---[]---[<a onclick="reinstall()" class="button"><img src="https://img.raymond.cc/blog/wp-content/uploads/2009/01/win8-system-restore-icon-120x120.png" alt="" width="100" height="100"></a>]---[]---[<a onclick="window.location.href = '/C/Windows/SystemApps/console/'" class="button"><img src="http://icons.iconarchive.com/icons/osullivanluke/orb-os-x/512/Terminal-icon.png" alt="" width="100" height="100"></a>
-</div>
-<div id="overlay" onclick="cancelreinstall()">
-  <div id="text" align="center"><img onclick="window.location.href = '/reinstall'" src="https://media.codeweavers.com/pub/crossover/website/images/pages/compatibility/install-windows-software-with-crossover-icon.png" alt="" width="140" height="140"><p>Click to Start</p></div>
-</div>  
-<object data="/uninstall.html" width="100" height="100"></object>
-</object>
+<object data="/C/Users/Account/Sign-in/Desktop/index.html" width="100%" height="100%"><object data="/options.html" width="100" height="100"></object></object>
 </div>
   
 <div id="WBMoverlay">
@@ -178,7 +166,7 @@ function check() {
   if (checkinstall == "1") {
     bootup();
   } else {
-    window.location.href = "/reinstall.html"
+    window.location.href = "/options"
   }
 }
 </script>
