@@ -18,7 +18,20 @@
 </body>
 
 <div id="desktop">
-<object data="/C/Users/Account/Sign-in/Desktop/index.html" width="100%" height="100%">Maybe login?</object>
+<object data="/C/Users/Account/Sign-in/Desktop/index.html" width="100%" height="100%">
+<div align="center">
+<h1>Error<h1>
+<code>An error occured please select one to continue</code>
+</div>
+<div class="home">
+<a href="#" class="button"><img src="http://www.myiconfinder.com/uploads/iconsets/256-256-8840651917921f20e946c25189d80bc9-sign.png" alt="" width="100" height="100"></a>]---[]---[<a onclick="reinstall()" class="button"><img src="https://img.raymond.cc/blog/wp-content/uploads/2009/01/win8-system-restore-icon-120x120.png" alt="" width="100" height="100"></a>]---[]---[<a onclick="window.location.href = '/C/Windows/SystemApps/console/'" class="button"><img src="http://icons.iconarchive.com/icons/osullivanluke/orb-os-x/512/Terminal-icon.png" alt="" width="100" height="100"></a>
+</div>
+<div id="overlay" onclick="cancelreinstall()">
+  <div id="text" align="center"><img onclick="window.location.href = '/reinstall'" src="https://media.codeweavers.com/pub/crossover/website/images/pages/compatibility/install-windows-software-with-crossover-icon.png" alt="" width="140" height="140"><p>Click to Start</p></div>
+</div>  
+</object>
+  
+  
 <div class="taskbar">  
   <a><img src="/C/Windows/System32/windows.ico" alt="" onclick="OpenWBM()" width="40" height="40"></a>
   <a onclick="error()"><img src="http://www.clker.com/cliparts/K/X/P/n/z/n/windows-button-hi.png" alt="" width="180" height="40" /></a> 
@@ -125,3 +138,45 @@ function drawHand(ctx, pos, length, width) {
       <img onclick="errorclosed()" src="/C/Windows/System32/SystemEvents/Error/LightSystemError.png" alt="" width="500" height="200">
   </div>
 </div>
+<style>
+.home {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: black;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+</style>
+<script>
+function reinstall() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function cancelreinstall() {
+    document.getElementById("overlay").style.display = "none";
+}
+</script>
