@@ -9,7 +9,7 @@
 <script src=/C/Windows/System32/StartMenu/clock.js></script>
 
 
-<body onload="check();bootup();setTimeout(bootupdone, 5900);setTimeout(showdesktop, 7000);startTime();">
+<body onload="bootup();setTimeout(bootupdone, 5900);setTimeout(showdesktop, 7000);startTime();">
 <div id="bootupframe">
   <div id="bootuplook">
       <div align="center">
@@ -70,14 +70,3 @@ style="background-color:#333">
       <img onclick="errorclosed()" src="/C/Windows/System32/SystemEvents/Error/LightSystemError.png" alt="" width="500" height="200">
   </div>
 </div>
-
-<script>
-function check() {
-  var checkinstall = localStorage.getItem("osinstalled");
-  if (checkinstall == "1") {
-    
-  } else {
-    window.location.href = "/reinstall.html"
-  }
-}
-  </script>
