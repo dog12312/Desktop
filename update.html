@@ -18,7 +18,7 @@
 </body>
 
 <div id="desktop">
-<object data="/C/Users/Account/Sign-in/Desktop/index.html" width="100%" height="100%"><object data="/options.html" width="100" height="100"></object></object>
+<object data="/C/Users/Account/Sign-in/Desktop/index.html" width="100%" height="100%"></object>
 </div>
   
 <div id="WBMoverlay">
@@ -120,53 +120,3 @@ function drawHand(ctx, pos, length, width) {
       <img onclick="errorclosed()" src="/C/Windows/System32/SystemEvents/Error/LightSystemError.png" alt="" width="500" height="200">
   </div>
 </div>
-<style>
-.home {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: black;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-}
-#overlay {
-    position: fixed;
-    display: none;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.8);
-    z-index: 2;
-    cursor: pointer;
-}
-
-#text{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 50px;
-    color: white;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-}
-</style>
-<script>
-function reinstall() {
-    document.getElementById("overlay").style.display = "block";
-}
-
-function cancelreinstall() {
-    document.getElementById("overlay").style.display = "none";
-}
-function check() {
-  var checkinstall = localStorage.getItem("osinstalled");
-  if (checkinstall == "1") {
-    bootup();
-  } else {
-    window.location.href = "/options"
-  }
-}
-</script>
