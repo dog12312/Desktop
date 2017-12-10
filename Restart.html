@@ -1,6 +1,7 @@
 <title>Rebooting</title>
 <link rel="shortcut icon" href="/logo.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="/logo.ico" type="image/x-icon">
+<body onload="check();">
 <style>
       body {
         background:#0000aa;
@@ -13,3 +14,15 @@
       }
 </style>
 <meta http-equiv="Refresh" content="3;url=/">
+<script>
+      
+function check() {
+  var checkinstall = localStorage.getItem("osinstalled");
+  if (checkinstall == "1") {
+    
+  } else {
+    window.location.href = "/reinstall.html"
+  }
+}
+</script>
+</body>
