@@ -3,70 +3,94 @@
 <title>The Xeon Project</title>
 <link rel="shortcut icon" href="/C/Windows/System32/windows.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="/C/Windows/System32/windows.ico" type="image/x-icon">
-<script src=/C/Windows/System32/System32.js></script>
-<link rel=stylesheet href=/C/Windows/System32/System32.css>
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+}
 
-<script src=/C/Windows/System32/StartMenu/clock.js></script>
+.bgimg {
+    background-image: url('/w3images/forestbridge.jpg');
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+}
 
+.topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+}
 
-<body onload="bootup();setTimeout(bootupdone, 5900);setTimeout(showdesktop, 7000);startTime();">
-<div id="bootupframe">
-  <div id="bootuplook">
-      <div align="center">
-<img src="https://cdn.dribbble.com/users/121337/screenshots/1024835/loading2.gif" alt="" width="100%" height="100%">
-    </div>
-    </div>
-</div>
-</body>
+.bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+}
 
-  
-<div id="desktop">
-<a onclick="window.open( '/C', 'File Explorer', 
-'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=700,height=400' );"><img src="https://winaero.com/blog/wp-content/uploads/2015/09/hard-drive-disk-icon.png" alt="" width="50" height="50"></a>
-<p> </p>
-<a onclick="window.location.href = '/update';"><img src="http://icons.iconseeker.com/ico/crystal-clear-actions/update-drivers.ico" alt="" width="50" height="50"></a>
-<p> </p>
-<a onclick="window.open( '/Arcade', 'Arcade', 
-'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=1000,height=600' );"><img src="/Arcade/logo.ico" alt="" width="50" height="50"></a>
-<p> </p>
-<a onclick="window.open( 'https://hangouts.google.com/', 'Hangouts', 
-'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=880,height=647' );"><img src="http://is5.mzstatic.com/image/thumb/Purple118/v4/6f/2f/9a/6f2f9a4a-3a9f-5428-7489-039d29e91dc5/source/1200x630bb.jpg" alt="" width="50" height="50"></a>
-<p> </p>
-<a onclick="window.open( 'https://discordapp.com/channels/@me', 'Discord', 
-'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=1000,height=600' );"><img src="https://www.shareicon.net/download/2016/12/30/866945_game_512x512.png" alt="" width="50" height="50"></a>
-<p> </p>
-<a onclick="window.open( '/C/Users/user/Desktop/Games', 'File Explorer', 
-'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=1000,height=600' );"><img src="https://cdn4.iconfinder.com/data/icons/sabre/snow_sabre_black/512/folder_black_games.png" alt="" width="50" height="50"></a>
-<p> </p>
-<a onclick="window.open( '/C/Users/user/Desktop/Applications', 'File Explorer', 
-'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=1000,height=600' );"><img src="http://icons.iconarchive.com/icons/thvg/wood-folders/512/Matte-Applications-icon.png" alt="" width="50" height="50"></a>
-<div class="taskbar">  
-<div style="padding:1px">
-  <a><img src="/C/Windows/System32/windows.ico" alt="" onclick="OpenWBM()" width="50" height="50"></a>
-  <a onclick="error()"><img src="http://www.clker.com/cliparts/K/X/P/n/z/n/windows-button-hi.png" alt="" width="200" height="50" /></a> 
-  <div id="clock" align="right"></div>
-</div>
-</div>
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 
-  
-<div id="WBMoverlay" onclick="CloseWBM()">  
-  <div id="WBMtext">
-<canvas id="0clock" width="400" height="400"
-style="background-color:#333">
-</canvas>
+hr {
+    margin: auto;
+    width: 40%;
+}
+</style>
+<div class="bgimg">
+  <div class="topleft">
+    <img onclick="window.location.href = 'https://dogindustrialstudios.github.io/Xeon/';" src="https://dogindustrialstudios.github.io/Xeon/Xeon.png" alt="" style="width:20%;">
+  </div>
+  <div class="middle">
+    <img onclick="window.location.href = 'https://dog12312.github.io/Arcade';" src="https://dog12312.github.io/Arcade/logo.ico" alt="" style="width:30%;">
+    <p>Arcade</p>
+    <p> </p>
+    <p> </p>
+    <h1>Xeon Project</h1>
+    <h1>COMING SOON</h1>
+    <hr>
+    <p id="demo" style="font-size:30px"></p>
+  </div>
+  <div class="bottomleft">
+    <p>Dog Industrial Studios</p>
   </div>
 </div>
 
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("December 18, 2017 10:10:00").getTime();
 
-<div id="sleepframe" onclick="wake()">
-  <div id="screensaver">
-    <a onclick="wake()"><img  src="https://i.stack.imgur.com/kx8MT.gif" alt="" width="100%" height="100%"></a>
-  </div>
-</div>
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
 
-
-<div id="errorframe">
-  <div id="errorlook">
-      <img onclick="errorclosed()" src="/C/Windows/System32/SystemEvents/Error/LightSystemError.png" alt="" width="500" height="200">
-  </div>
-</div>
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(countdownfunction);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
