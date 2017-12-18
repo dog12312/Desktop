@@ -1,96 +1,194 @@
 <meta name=apple-mobile-web-app-capable content=yes>
 <meta name=apple-mobile-web-app-status-bar-style content=black>
-<title>The Xeon Project</title>
-<link rel="shortcut icon" href="/C/Windows/System32/windows.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="/C/Windows/System32/windows.ico" type="image/x-icon">
-<style>
-body, html {
-    height: 100%;
-    margin: 0;
-}
+<title>Xeon Project</title>
+<link rel="shortcut icon" href="https://dogindustrialstudio.github.io/Xeon/Xeon.png" type="image/x-icon">
+<link rel="apple-touch-icon" href="https://dogindustrialstudio.github.io/Xeon/Xeon.png" type="image/x-icon">
+<script src=/C/Windows/System32/System32.js></script>
+<link rel=stylesheet href=/C/Windows/System32/System32.css>
 
-.bgimg {
-    background-image: url('https://w3schools.com/w3images/forestbridge.jpg');
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    color: white;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 25px;
-}
 
-.topleft {
-    position: absolute;
-    top: 0;
-    left: 16px;
-}
+<body onload="check();setTimeout(bootupdone, 7000);setTimeout(showdesktop, 5900);startTime();">
+<div id="bootupframe">
+  <div id="bootuplook">
+      <div align="center">
+<img src="https://cdn.dribbble.com/users/121337/screenshots/1024835/loading2.gif" alt="" width="100%" height="100%">
+    </div>
+    </div>
+</div>
+</body>
 
-.bottomleft {
-    position: absolute;
-    bottom: 0;
-    left: 16px;
-}
+<div id="desktop">
+<object data="/C/Account/Console/index.html" width="100%" height="100%">
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<title>Console</title>
+	
+	<!-- Stylesheet -->
+	<link href="/console/sandbox.css" rel="stylesheet"/>
+	
+</head>
 
-.middle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
+<body>
 
-hr {
-    margin: auto;
-    width: 40%;
+	<!-- HTML -->
+
+	<div id="sandbox">Console loading, please wait...</div>
+
+
+	<!-- Templates -->
+	
+	<!-- The sandbox template: -->
+	<script type="text/template" id="tplSandbox">
+		<pre class="output"></pre>
+		<div class="input">
+			<textarea rows="1" placeholder="<%= placeholder %>"></textarea>
+		</div>
+	</script>
+
+	<!-- The command/result template (NB whitespace/line breaks matter inside <pre> tag): -->
+	<script type="text/template" id="tplCommand"><% if (! _hidden) { %><span class="command"><%= command %></span>
+<span class="prefix"><%= this.resultPrefix %></span><span class="<%= _class %>"><%= result %></span>
+<% } %></script>
+
+
+	<!-- Scripts -->
+
+	<!-- Underscore, Backbone, backbone-localStorage, jQuery -->
+	<script src="/C/Windows/SystemApps/console/libs/underscore.min.js"></script>
+	<script src="/C/Windows/SystemApps/console/libs/backbone.min.js"></script>
+	<script src="/C/Windows/SystemApps/console/libs/backbone-localStorage.min.js"></script>
+	<script src="/C/Windows/SystemApps/console/libs/jquery.min.js"></script>
+
+	<!-- The JS Sandbox Console script (requires underscore, backbone and jquery): -->
+	<script src="/console/sandbox-console.js"></script>
+	
+	<!-- When ready, create the model and view -->
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			// Create the sandbox:
+			window.sandbox = new Sandbox.View({
+				el : $('#sandbox'),
+				model : new Sandbox.Model({
+					iframe : true,  // evaluate commands inside a hidden iframe (default: false)
+					fallback : true // use global eval if iframe isn't available (default: true)
+				})
+			});
+		});
+	</script>
+
+</body>
+</html>
+</object>
+</div>
+  
+<div id="WBMoverlay">
+<img onclick="CloseWBM();" src="/C/Windows/System32/icons/close.png" alt="" width="30" height="30">
+<p> </p>
+<div id="WBMtext">
+<canvas id="0clock" width="100" height="100"
+style="background-color:#333">
+<script>
+  var oclock = document.getElementById("0clock");
+var ctx = oclock.getContext("2d");
+var radius = oclock.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+setInterval(drawClock, 1000);
+function drawClock() {
+  drawFace(ctx, radius);
+  drawNumbers(ctx, radius);
+  drawTime(ctx, radius);
 }
-</style>
-<div class="bgimg">
-  <div class="topleft">
-    <img onclick="window.location.href = 'https://dogindustrialstudios.github.io/Xeon/';" src="https://dogindustrialstudios.github.io/Xeon/Xeon.png" alt="" style="width:20%;">
-  </div>
-  <div class="middle">
-    <img onclick="window.location.href = 'https://dog12312.github.io/Arcade';" src="https://dog12312.github.io/Arcade/logo.ico" alt="" style="width:30%;">
-    <p>Arcade</p>
-    <p> </p>
-    <p> </p>
-    <h1>Xeon Project</h1>
-    <h1>COMING SOON</h1>
-    <hr>
-    <p id="demo" style="font-size:30px"></p>
-  </div>
-  <div class="bottomleft">
-    <p>Dog Industrial Studios</p>
+function drawFace(ctx, radius) {
+  var grad;
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, 0, 2*Math.PI);
+  ctx.fillStyle = 'white';
+  ctx.fill();
+  grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+  grad.addColorStop(0, '#333');
+  grad.addColorStop(0.5, 'white');
+  grad.addColorStop(1, '#333');
+  ctx.strokeStyle = grad;
+  ctx.lineWidth = radius*0.1;
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+  ctx.fillStyle = '#333';
+  ctx.fill();
+}
+function drawNumbers(ctx, radius) {
+  var ang;
+  var num;
+  ctx.font = radius*0.15 + "px arial";
+  ctx.textBaseline="middle";
+  ctx.textAlign="center";
+  for(num = 1; num < 13; num++){
+    ang = num * Math.PI / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.85);
+    ctx.rotate(-ang);
+    ctx.fillText(num.toString(), 0, 0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.85);
+    ctx.rotate(-ang);
+  }
+}
+function drawTime(ctx, radius){
+    var now = new Date();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var second = now.getSeconds();
+    //hour
+    hour=hour%12;
+    hour=(hour*Math.PI/6)+
+    (minute*Math.PI/(6*60))+
+    (second*Math.PI/(360*60));
+    drawHand(ctx, hour, radius*0.5, radius*0.07);
+    //minute
+    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+    drawHand(ctx, minute, radius*0.8, radius*0.07);
+    // second
+    second=(second*Math.PI/30);
+    drawHand(ctx, second, radius*0.9, radius*0.02);
+}
+function drawHand(ctx, pos, length, width) {
+    ctx.beginPath();
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.moveTo(0,0);
+    ctx.rotate(pos);
+    ctx.lineTo(0, -length);
+    ctx.stroke();
+    ctx.rotate(-pos);
+}
+</script>
+</canvas>
   </div>
 </div>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("December 18, 2017 10:10:00").getTime();
-
-// Update the count down every 1 second
-var countdownfunction = setInterval(function() {
-
-    // Get todays date and time
-    var now = new Date().getTime();
-    
-    // Find the distance between now an the count down date
-    var distance = countDownDate - now;
-    
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    // Output the result in an element with id="demo"
-    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
-    
-    // If the count down is over, write some text 
-    if (distance < 0) {
-        clearInterval(countdownfunction);
-        document.getElementById("demo").innerHTML = "EXPIRED";
-    }
-}, 1000);
+  
+  
+<div id="sleepframe" onclick="wake()">
+  <div id="screensaver">
+    <a onclick="wake()"><img  src="https://i.stack.imgur.com/kx8MT.gif" alt="" width="100%" height="100%"></a>
+  </div>
+</div>
+  
+  
+<div id="errorframe">
+  <div id="errorlook">
+      <img onclick="errorclosed()" src="/C/Windows/System32/SystemEvents/Error/LightSystemError.png" alt="" width="500" height="200">
+  </div>
+</div>
+<script> 
+function check() {
+  var checkinstall = localStorage.getItem("osinstalled");
+  if (checkinstall == "1") {
+    bootup();
+  } else {
+    window.location.href = "/console"
+  }
+}
 </script>
