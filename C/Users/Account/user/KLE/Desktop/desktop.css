@@ -5,7 +5,7 @@ body {
     margin: 0;
 }
 #secure {
-    background: url() no-repeat;
+    background: url(https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.amz.mshcdn.com%2F6ugDfUSKdT6hiOUGZUc50aqBPL8%3D%2Ffit-in%2F1200x9600%2Fhttps%253A%252F%252Fblueprint-api-production.s3.amazonaws.com%252Fuploads%252Fcard%252Fimage%252F477436%252F1c3efd91-7203-4f87-be6a-d3a44df2ea7d.jpg&imgrefurl=http%3A%2F%2Fmashable.com%2F2017%2F05%2F15%2Fhorrible-hacker-stock-photos%2F&docid=oz--Ir1HCxCqSM&tbnid=rD8KF5wqgia5JM%3A&vet=10ahUKEwjjuN6qqpvYAhUG8IMKHWi1D9UQMwiZAigAMAA..i&w=1000&h=667&safe=active&bih=629&biw=1366&q=hacker&ved=0ahUKEwjjuN6qqpvYAhUG8IMKHWi1D9UQMwiZAigAMAA&iact=mrc&uact=8) no-repeat;
     background-size: 100% 100%;
     position: fixed;
     display: none;
