@@ -385,7 +385,7 @@ var Sandbox = {
 			if ( command.indexOf("reinstall") > -1 ) {
 				return this.model.addHistory({
 					command : command,
-					result : window.location.href = '/reinstall'
+					result : window.location.href = '/Xeon/reinstall'
 				});
 			}
 			if ( command.indexOf("back") > -1 ) {
