@@ -26,6 +26,17 @@
 <p>&nbsp;</p>
 
 
+<div id="ArcadeApp">
+<div id="ArcadeIcon"><a onclick="window.open( 'https://dog12312.github.io', 'Arcade', 
+'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=700,height=400' );"><img draggable="false" src="https://dog12312.github.io/logo.ico" alt="" width="50" height="50"></a>
+</div>
+<a>C:\<a>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
 <div id="ConsoleApp">
 <div id="ConsoleIcon"><a onclick="window.open( '/C/Windows/SystemApps/console/', 'console', 
 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=1000,height=600' );"><img draggable="false" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg7X2hENrBZ4er-VWR-fX1LCh6XC_ie4I_eN-ObEumnYOS3Ybo" alt="" width="50" height="50"></a>
@@ -80,15 +91,35 @@ function UserIDFinder() {
     position: absolute;
     text-align: center;
 }
+#LoginApp {
+    position: absolute;
+    text-align: center;
+}
 #ArcadeApp {
+    position: absolute;
+    text-align: center;
+}
+#ConsoleApp {
+    position: absolute;
+    text-align: center;
+}
+#HangoutsApp {
+    position: absolute;
+    text-align: center;
+}
+#GamesFolder {
     position: absolute;
     text-align: center;
 }
 </style>
 <script>
 //Make the DIV element draggagle:
+dragElement(document.getElementById(("FileExplorerApp")));
+dragElement(document.getElementById(("LoginApp")));
 dragElement(document.getElementById(("ArcadeApp")));
-
+dragElement(document.getElementById(("ConsoleApp")));
+dragElement(document.getElementById(("HangoutsApp")));
+dragElement(document.getElementById(("GamesFolder")));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
