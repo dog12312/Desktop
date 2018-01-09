@@ -6,70 +6,17 @@
 
 
 
-<div id="FileExplorerApp">
-<div id="CIcon"><a onclick="window.open( '/Xeon/C', 'File Explorer', 
+<a onclick="window.open( '/Xeon/C', 'File Explorer', 
 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=700,height=400' );"><img draggable="false" src="https://winaero.com/blog/wp-content/uploads/2015/09/hard-drive-disk-icon.png" alt="" width="50" height="50"></a>
-</div>
-<a>C:\<a>
-</div>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-
-<div id="LoginApp">
-<div id="LoginIcon"><a onclick="UserIDFinder();"><img draggable="false" src="http://rms.safeguardstorage.com.my/DefaultPage/default/loginlogored.png" alt="" width="50" height="50"></a></div>
-<a>Login<a>
-</div>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-
-<div id="ArcadeApp">
-<div id="ArcadeIcon"><a onclick="window.open( 'https://dog12312.github.io', 'Arcade', 
+<a onclick="UserIDFinder();"><img draggable="false" src="http://rms.safeguardstorage.com.my/DefaultPage/default/loginlogored.png" alt="" width="50" height="50"></a>
+<a onclick="window.open( 'https://dog12312.github.io', 'Arcade', 
 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=700,height=400' );"><img draggable="false" src="https://dog12312.github.io/logo.ico" alt="" width="50" height="50"></a>
-</div>
-<a>C:\<a>
-</div>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-
-<div id="ConsoleApp">
-<div id="ConsoleIcon"><a onclick="window.open( '/C/Windows/SystemApps/console/', 'console', 
+<a onclick="window.open( '/C/Windows/SystemApps/console/', 'console', 
 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=1000,height=600' );"><img draggable="false" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg7X2hENrBZ4er-VWR-fX1LCh6XC_ie4I_eN-ObEumnYOS3Ybo" alt="" width="50" height="50"></a>
-</div>
-<a>Arcade<a>
-</div>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-
-<div id="HangoutsApp">
-<div id="HangoutsIcon"><a onclick="window.open( 'https://hangouts.google.com/', 'Hangouts', 
+<a onclick="window.open( 'https://hangouts.google.com/', 'Hangouts', 
 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=880,height=647' );"><img draggable="false" src="http://is5.mzstatic.com/image/thumb/Purple118/v4/6f/2f/9a/6f2f9a4a-3a9f-5428-7489-039d29e91dc5/source/1200x630bb.jpg" alt="" width="50" height="50"></a>
-</div>
-<a>Arcade<a>
-</div>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-
-<div id="GamesFolder">
-<div id="GamesFolderIcon"><a onclick="window.open( '/Xeon/C/Users/user/Desktop/Applications', 'File Explorer', 
+<a onclick="window.open( '/Xeon/C/Users/user/Desktop/Applications', 'File Explorer', 
 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=1000,height=600' );"><img draggable="false" src="http://icons.iconarchive.com/icons/thvg/wood-folders/512/Matte-Applications-icon.png" alt="" width="50" height="50"></a>
-</div>
-<a>Arcade<a>
-</div>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-
 <div class="taskbar">  
   <a><img src="/C/Windows/System32/windows.ico" alt="" onclick="OpenWBM()" width="40" height="40"></a>
   <a onclick="error()"><img src="http://www.clker.com/cliparts/K/X/P/n/z/n/windows-button-hi.png" alt="" width="180" height="40" /></a> 
@@ -81,82 +28,5 @@ function UserIDFinder() {
     if (ID != null) {
         window.location.href = '/Xeon/C/Users/Account/user/' + ID + '/Desktop/index.html';
     }
-}
-</script>
-
-
-
-<style>
-#FileExplorerApp {
-    position: absolute;
-    text-align: center;
-}
-#LoginApp {
-    position: absolute;
-    text-align: center;
-}
-#ArcadeApp {
-    position: absolute;
-    text-align: center;
-}
-#ConsoleApp {
-    position: absolute;
-    text-align: center;
-}
-#HangoutsApp {
-    position: absolute;
-    text-align: center;
-}
-#GamesFolder {
-    position: absolute;
-    text-align: center;
-}
-</style>
-<script>
-//Make the DIV element draggagle:
-dragElement(document.getElementById(("FileExplorerApp")));
-dragElement(document.getElementById(("LoginApp")));
-dragElement(document.getElementById(("ArcadeApp")));
-dragElement(document.getElementById(("ConsoleApp")));
-dragElement(document.getElementById(("HangoutsApp")));
-dragElement(document.getElementById(("GamesFolder")));
-
-function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
-    /* if present, the header is where you move the DIV from:*/
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-  } else {
-    /* otherwise, move the DIV from anywhere inside the DIV:*/
-    elmnt.onmousedown = dragMouseDown;
-  }
-
-  function dragMouseDown(e) {
-    e = e || window.event;
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.event;
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    /* stop moving when mouse button is released:*/
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
 }
 </script>
